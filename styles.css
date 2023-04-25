@@ -74,8 +74,6 @@ h4 {
 
 .container2 {
     display: flex;
-    grid-template-columns: 1fr 1fr;
-    gap: 19px;
 }
 
 .container2__texto{
