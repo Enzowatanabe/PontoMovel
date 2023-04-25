@@ -1,0 +1,98 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Dormitórios e closets">
+	<div class="centralizado">
+		<div class="container__principal">
+			<p class="titulo">DORMITÓRIOS E CLOSETS</p>
+			<div class="linha"></div>
+			<div class="mosaico">
+				<div class="container__horizontal">
+					<img
+						class="imagem"
+						src="/PontoMovel/dormitorios-closets/imagem-1.png"
+					/>
+					<img
+						class="imagem"
+						src="/PontoMovel/dormitorios-closets/imagem-2.png"
+					/>
+					<img
+						class="imagem"
+						src="/PontoMovel/dormitorios-closets/imagem-3.png"
+					/>
+				</div>
+				<div class="container__horizontal">
+					<img
+						class="imagem"
+						src="/PontoMovel/dormitorios-closets/imagem-4.png"
+					/>
+					<img
+						class="imagem"
+						src="/PontoMovel/dormitorios-closets/imagem-5.png"
+					/>
+					<img
+						class="imagem"
+						src="/PontoMovel/dormitorios-closets/imagem-6.png"
+					/>
+				</div>
+				<div class="container__horizontal">
+					<img
+						class="imagem"
+						src="/PontoMovel/dormitorios-closets/imagem-7.png"
+					/>
+					<img
+						class="imagem"
+						src="/PontoMovel/dormitorios-closets/imagem-8.png"
+					/>
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.bg {
+		background-color: green;
+	}
+
+	.centralizado {
+		display: grid;
+		place-items: center;
+	}
+
+	.container__principal {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		gap: 20px;
+	}
+
+	.titulo {
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	.linha {
+		width: 200px;
+		border: 3px solid black;
+	}
+
+	.mosaico {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 20px;
+		padding: 20px;
+	}
+
+	.container__horizontal {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.imagem {
+		width: 100%;
+	}
+</style>
