@@ -1,0 +1,171 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Ponto Movel Marcenaria">
+	<img src="/PontoMovel/home/vetor-1.png" class="imagem__vetor" />
+	<img src="/PontoMovel/home/vetor-2.png" class="imagem__vetor1" />
+	<section class="container2">
+		<div class="container2__texto">
+			<h2>PROJETO</h2>
+			<h1>
+				MÓVEIS
+				<br />SUSTENTÁVEIS
+			</h1>
+			<p class="container2__p">
+				Além da utilização de materiais desenvolvidos de modo não
+				agressivo à natureza e do cuidado na reciclagem de descartes,
+				estamos desenvolvendo linha de móveis feitos com materiais
+				reciclados, retalhos de chapas e material descartado, como
+				madeiras maciças de portas antigas. Também restauramos e fazemos
+				adaptações, reciclando e transformando seus móveis especiais.
+			</p>
+			<button class="container2__botao">SAIBA MAIS</button>
+		</div>
+		<div>
+			<img
+				src="/PontoMovel/home/mesa.png"
+				alt="imagem mesa sustentável"
+			/>
+		</div>
+	</section>
+	<section class="container3">
+		<div>
+			<img src="/PontoMovel/home/quarto-1.png" alt="imagem quarto" />
+		</div>
+		<div class="conteiner3__texto1">
+			<div class="container3__texto">
+				<h2>PONTO MÓVEL</h2>
+				<h1>MARCENARIA</h1>
+				<p class="container3__p">
+					Produzimos móveis exclusivos e sob medida com materiais
+					atualizados em tecnologia, com construção e acabamento da
+					melhor qualidade, reconhecidos pelo design e funcionalidade.
+					Executamos projetos nossos, de arquitetos e designers
+					parceiros ou de outros arquitetos e engenharias
+				</p>
+			</div>
+		</div>
+	</section>
+	<section class="container4">
+		<img
+			src="/PontoMovel/home/vetor-3.png"
+			class="container4__vetor"
+			alt="Elemento de estilização"
+		/>
+		<div class="container4__texto">
+			<h2>PONTO MÓVEL</h2>
+			<h1>PROJETO</h1>
+			<p class="container4__p">
+				Desenvolvemos projetos para espaços residenciais ou
+				corporativos. Nossa equipe soma a formação da arquitetura e do
+				design com a experiência técnica. Medição e detalhamento
+				executivo com previsão dos acabamentos em obra.
+			</p>
+		</div>
+		<div class="container4__img">
+			<img
+				src="/PontoMovel/home/mesa-sustentavel.png"
+				alt="imagem mesa sustentável"
+			/>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	.imagem__vetor {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		right: 0;
+	}
+
+	.imagem__vetor1 {
+		position: absolute;
+		z-index: -1;
+	}
+
+	/* section1 */
+	.container2 {
+		display: flex;
+		grid-template-columns: 1fr 1fr;
+		gap: 19px;
+	}
+
+	.container2__texto {
+		margin-left: 46px;
+		margin-top: 63px;
+	}
+
+	.container2__p {
+		font-weight: 400;
+		font-size: 13px;
+		margin-bottom: 15px;
+	}
+
+	.container2__botao {
+		box-sizing: border-box;
+		border-radius: 20px;
+		padding: 13px 32px;
+		width: 156px;
+		height: 46px;
+		background-color: var(--letracor);
+		border: none;
+		color: white;
+		font-size: 13px;
+		font-weight: 700;
+	}
+
+	/* section2 */
+	.container3 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 19px;
+	}
+
+	.container3__texto1 {
+		position: relative;
+	}
+
+	.container3__texto {
+		position: absolute;
+		margin-right: 22px;
+		margin-top: 55px;
+		left: 580px;
+	}
+
+	.container3__p {
+		font-weight: 400;
+		font-size: 13px;
+		margin-bottom: 15px;
+	}
+
+	/* section3 */
+	.container4 {
+		display: flex;
+		gap: 19px;
+		position: relative;
+	}
+
+	.container4__vetor {
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		right: 0;
+	}
+
+	.container4__texto {
+		margin-left: 46px;
+		margin-top: 178px;
+	}
+
+	.container4__p {
+		font-weight: 400;
+		font-size: 13px;
+		margin-bottom: 15px;
+	}
+
+	.container4__img {
+		margin-right: 22px;
+	}
+</style>
