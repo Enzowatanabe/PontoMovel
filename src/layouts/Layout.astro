@@ -30,6 +30,7 @@ const { title } = Astro.props;
 		<header>
 			<Navbar />
 			<main>
+				<img src="/PontoMovel/home/vetor-1.png" class="imagem__vetor" />
 				<slot />
 			</main>
 			<Footer />
@@ -88,6 +89,13 @@ const { title } = Astro.props;
 
 		main {
 			flex-grow: 1;
+		}
+
+		.imagem__vetor {
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			right: 0;
 		}
 	</style>
 </html>
