@@ -1,0 +1,175 @@
+<nav>
+	<div class="logo">
+		<a href="/PontoMovel/">
+			<img src="/PontoMovel/logo.png" alt="logo da Ponto Móvel" />
+		</a>
+	</div>
+	<div id="hamburger" class="hamburger">
+		<svg
+			id="hamburger-open"
+			class="hamburger-svg"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"
+			></path></svg
+		>
+		<svg
+			id="hamburger-close"
+			class="hamburger-svg"
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="2 2 20 20"
+			><path
+				d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z"
+			></path></svg
+		>
+	</div>
+
+	<div id="container__links" class="container__links">
+		<div class="centered container__lista">
+			<a href="/PontoMovel/">Home</a>
+			<a href="/PontoMovel/quemsomos">Quem somos</a>
+			<a href="/PontoMovel/residencial">Residencial</a>
+			<a href="/PontoMovel/corporative">Corporativa</a>
+			<a href="/PontoMovel/projeto">Projeto</a>
+			<a href="/PontoMovel/servicos">Serviço e Sustentabilidade</a>
+		</div>
+		<div class="centered">
+			<a href="/PontoMovel/contato">Contato</a>
+		</div>
+	</div>
+</nav>
+
+<style>
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 25px;
+		color: var(--letracor);
+		font-size: clamp(14px, 10vw, 4rem);
+	}
+
+	.centered {
+		display: flex;
+		align-items: center;
+	}
+
+	.line {
+		border: 2px solid black;
+	}
+
+	.container__lista {
+		gap: 1.2rem;
+	}
+
+	.container__links {
+		display: flex;
+		width: 100%;
+		justify-content: space-between;
+		margin-left: 50px;
+		margin-bottom: 20px;
+		transition: left ease-in-out 150ms;
+	}
+
+	nav a {
+		color: var(--letracor);
+		font-size: min(1.5vw, 1.2rem);
+	}
+
+	nav a:hover {
+		filter: brightness(70%);
+	}
+
+	.hamburger {
+		display: none;
+	}
+
+	.hamburger:hover {
+		background-color: #3333;
+	}
+
+	.hamburger-svg {
+		display: block;
+	}
+
+	@media (max-width: 1000px) {
+		.hamburger {
+			position: absolute;
+			display: block;
+			width: 30px;
+			top: 0;
+			left: 35px;
+			z-index: 12;
+			margin-top: 10px;
+			cursor: pointer;
+			padding: 10px;
+			border-radius: 5px;
+		}
+
+		nav {
+			position: relative;
+			margin-bottom: 20px;
+		}
+
+		.logo {
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+		}
+
+		.container__links {
+			position: fixed;
+			top: 0;
+			left: -100%;
+			margin: 0;
+			width: min(100%, 400px);
+			height: 100%;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: start;
+			gap: 40px;
+			padding-left: 40px;
+			padding-top: 80px;
+			background-color: rgba(255, 255, 255, 0.974);
+			z-index: 10;
+			overflow-y: hidden;
+		}
+
+		.container__links a {
+			font-size: 1.2rem;
+		}
+
+		.container__lista {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 20px;
+		}
+
+		nav input[type="checkbox"] {
+		}
+	}
+</style>
+
+<script>
+	let open = false;
+	const hamburger = document.getElementById("hamburger");
+	const links = document.getElementById("container__links");
+	const hamburgerOpen = document.getElementById("hamburger-open");
+	const hamburgerClose = document.getElementById("hamburger-close");
+
+	function handleHamburger() {
+		let x = open ? "0" : "-100";
+		links.style.left = `${x}%`;
+
+		hamburgerOpen.style.display = open ? "none" : "block";
+		hamburgerClose.style.display = open ? "block" : "none";
+	}
+
+	hamburger.onclick = () => {
+		open = !open;
+		handleHamburger();
+	};
+
+	handleHamburger();
+</script>
