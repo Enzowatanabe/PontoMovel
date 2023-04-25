@@ -1,0 +1,245 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Quem somos">
+	<section class="container1">
+		<div class="container1__texto">
+			<h2>MARCENARIA</h2>
+			<h1>RESIDENCIAL</h1>
+			<p class="container1__p">
+				Para a construção dos móveis utilizamos MDF da Duratex em seus
+				diversos padrões. A Duratex tem o Microban, antifungos, é
+				produzido com eucaliptos, e não com pinus, além de ter a maior
+				densidade do mercado. Caso haja preferência por outros padrões,
+				também utilizamos outrasmarcas. Trabalhamos com todas as marcas
+				de laminadose também com folhas naturais. Na laca, utilizamos
+				produtos Sayerlack. As ferragens são da marca Blum e Hettich.
+				Nosso padrão de qualidade é tradicional, fazemos móveis para
+				durar. E oferecemos cinco anos de garantia para os móveis
+				residenciais.
+			</p>
+		</div>
+		<div class="container1__blocoimg">
+			<img
+				src="/PontoMovel/residencial/sala-1.png"
+				alt="Image de uma sala de estar"
+				class="container1__img"
+			/>
+			<div class="container1__borda">
+				<p>Aqui seu sonho vira realidade.</p>
+			</div>
+			<img
+				src="/PontoMovel/residencial/fundo.png"
+				alt="Uma planta e um tapete"
+				class="container1__img2"
+			/>
+		</div>
+	</section>
+	<section class="container2">
+		<div>
+			<img
+				src="/PontoMovel/residencial/cozinha.png"
+				alt="Imagem de uma cozinha"
+				class="container2__img1"
+			/>
+			<div class="container2__txtimg">
+				<p class="container2__text">SALAS E VARANDAS</p>
+			</div>
+		</div>
+		<div>
+			<img
+				src="/PontoMovel/residencial/dormitorio.png"
+				alt="Image de um dormitorio e closets"
+				class="container2__img1"
+			/>
+			<div class="container2__txtimg1">
+				<p class="container2__text">DORMITÓRIOS E CLOSETS</p>
+			</div>
+		</div>
+		<div>
+			<img
+				src="/PontoMovel/residencial/sala-2.png"
+				alt="Imagem de uma sala de estar"
+				class="container2__img1"
+			/>
+			<div class="container2__txtimg1">
+				<p class="container2__text">COZINHAS E LAVANDERIAS</p>
+			</div>
+		</div>
+	</section>
+	<section class="container3">
+		<div class="container3__bloco">
+			<img
+				src="/PontoMovel/residencial/pia-banheiro.png"
+				alt="Imagem de pias de banheiro"
+				class="container3__img"
+			/>
+			<div class="container3__txtimg1">
+				<p class="container3__text">BANHEIRO</p>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	/* section1 */
+
+	.container1 {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.container1__p {
+		font-size: 13px;
+		font-weight: 400;
+	}
+
+	.container1__img {
+		position: relative;
+		margin-right: 80px;
+		margin-top: 200px;
+	}
+
+	.container1__img2 {
+		position: absolute;
+		z-index: -2;
+		right: 0;
+		top: 110px;
+	}
+
+	.container1__texto {
+		text-align: justify;
+		margin: 100px 84px 0 54px;
+	}
+
+	.container1__borda {
+		box-sizing: border-box;
+		border: 3px solid #5b5b5b;
+		position: absolute;
+		z-index: -1;
+		right: 40px;
+		top: 200px;
+		padding: 57px 307px 222px 56px;
+		width: 548px;
+		height: 297px;
+		font-weight: 600;
+		font-size: 15px;
+		white-space: nowrap;
+	}
+
+	/* section2 */
+
+	.container2 {
+		display: flex;
+		justify-content: space-around;
+		margin: 100px 40px;
+	}
+
+	.container2__img1 {
+		position: absolute;
+	}
+
+	.container2__img1:hover,
+	.container3__img:hover {
+		box-sizing: border-box;
+		border: 2px solid #d7a886;
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+
+	.container2__txtimg:hover,
+	.container2__txtimg1:hover,
+	.container2__txtimg2:hover,
+	.container3__txtimg1:hover {
+		transform: scale(1.05);
+		cursor: pointer;
+	}
+
+	.container2__txtimg {
+		position: relative;
+		text-align: center;
+		align-items: center;
+		margin: 200px 40px;
+		box-sizing: border-box;
+		background-color: white;
+		opacity: 0.8;
+		width: 194px;
+		height: 80px;
+		padding: 14px 9px;
+	}
+
+	.container2__txtimg1 {
+		position: relative;
+		text-align: center;
+		align-items: center;
+		margin: 200px 40px;
+		box-sizing: border-box;
+		background-color: white;
+		opacity: 0.8;
+		width: 194px;
+		height: 80px;
+		padding: 14px 9px;
+	}
+
+	.container2__txtimg2 {
+		position: relative;
+		text-align: center;
+		align-items: center;
+		margin: 200px 40px;
+		box-sizing: border-box;
+		background-color: white;
+		opacity: 0.8;
+		width: 194px;
+		height: 80px;
+		padding: 14px 9px;
+	}
+
+	.container2__text {
+		color: black;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	/* section2 */
+
+	/* section3 */
+
+	.container3 {
+		align-items: center;
+		text-align: center;
+		margin: 50px 40px;
+		height: 200px;
+	}
+
+	.container3__bloco {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	.container3__img {
+		position: absolute;
+		top: 1200px;
+	}
+
+	.container3__text {
+		color: black;
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	.container3__txtimg1 {
+		position: relative;
+		text-align: center;
+		align-items: center;
+		box-sizing: border-box;
+		background-color: white;
+		opacity: 0.8;
+		width: 194px;
+		height: 80px;
+		padding: 28px 9px;
+		margin: 30px;
+	}
+</style>
