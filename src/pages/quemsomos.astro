@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+
+
+<Layout title="Quem Somos">
+    <section class="container">
+        <div>
+            <img src="/PontoMovel/quemsomos/image 1.png" alt="imagem principal quem somos" class="container__img">
+            <div class="container__bloco1"></div>
+            <div class="container__bloco2"></div>
+            <div class="container__bloco3"></div>
+        </div>
+        <div class="container__txt">
+            <h2>PROJETO</h2>
+            <h1>Quem Somos</h1>
+            <p>Com experiência de mais de 35 anos em produção de móveis sob medida, executamos projetos de marcenaria residenciais e corporativos.
+
+                Em 20 anos cadastramos 3.000 clientes efetivos. Sempre atualizados em relação aos materiais construtivos e de acabamento, contamos também com a parceria de arquitetos e designers, oferecendo atendimento especial. Nosso objetivo: produzir com qualidade e o melhor acabamento, estando em processo constante de aperfeiçoamento.</p>
+            
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .container {
+        display: flex;
+        margin-bottom: 150px;
+        height: 90vh;
+    }
+
+    .container__img {
+        position: relative;
+        top: 234px;
+        left: 60px;
+    }
+
+    .container__bloco1 {
+        box-sizing: border-box;
+        background: #D7A886;
+        position: absolute;
+        z-index: -1;
+		top: 219px;
+        left: 123px;
+		width: 349px;
+		height: 629px;
+		
+    }
+
+    .container__bloco2{
+        position: absolute;
+        box-sizing: border-box;
+		border: 3px solid #8c8c8c;
+        z-index: -2;
+        width: 404px;
+        height: 208px;
+        top: 400px;
+        left: 170px;
+
+    }
+
+    .container__bloco3{
+        position: absolute;
+        box-sizing: border-box;
+		border: 3px solid #d9d9d9;
+        z-index: -3;
+        width: 283px;
+        height: 411px;
+        top: 179px;
+        left: 94px;
+
+    }
+
+    .container__txt{
+        margin: 240px 50px 0 200px;
+        text-align: justify;
+
+    }
+
+</style>

@@ -1,0 +1,89 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+---
+
+<Layout title="Corporativa">
+    <section class="container">
+        <div>
+            <img src="/PontoMovel/corporativa/image 43.png" alt="imagem principal corp" class="container__img">
+            <img src="/PontoMovel/corporativa/image 42.png" alt="imagem secundaria corp" class="container__img1">
+            <div class="container__bloco1"></div>
+            <div class="container__bloco2"></div>
+        </div>
+        <div class="container__txt">
+            <h2>MARCENARIA</h2>
+            <h1>Corporativa</h1>
+            <p>Marcenaria para engenharia corporativa.
+                Equipe apta para a realização de projetos de engenharia, arquitetura e design. Excelência na realização de acordo com as especificações.
+                Montagens noturnas. Compromisso com prazos.
+                Também realizamos projetos exclusivos para diretorias.
+                Qualidade em produtos e serviços.</p>
+                <ul class="container__lista">
+                <li>escritórios</li>
+                <li>hotelaria</li>
+                <li>hospitais</li>
+                <li>lojas</li>
+                <li>academias</li>
+                <li>outros</li>
+                </ul>
+        </div>
+    </section>
+</Layout>
+
+<style>
+    .container {
+        display: flex;
+        margin-bottom: 150px;
+        height: 60vh;
+    }
+
+    .container__img{
+        position: relative;
+        top: 120px;
+        left: 190px;
+    }
+
+    .container__img1{
+        position: absolute;
+        z-index: -1;
+        top: 360px;
+        left: 40px;
+    }
+
+    .container__bloco1 {
+		box-sizing: border-box;
+		border: 3px solid #5b5b5b;
+		position: absolute;
+		z-index: -2;
+		top: 186px;
+        left: -193px;
+		padding: 57px 307px 222px 56px;
+		width: 548px;
+		height: 297px;
+		font-weight: 600;
+		font-size: 15px;
+		white-space: nowrap;
+	}
+
+    .container__bloco2 {
+		box-sizing: border-box;
+        background-color: #e2b88e;
+		position: absolute;
+		z-index: -3;
+        top: 270px;
+        left: 126px;
+		width: 271px;
+		height: 345px;
+		white-space: nowrap;
+	}
+
+    .container__txt{
+        margin: 95px 20px 0 300px;
+
+    }
+
+    .container__lista{
+        margin-left: 20px;
+    }
+</style>
