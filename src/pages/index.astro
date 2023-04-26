@@ -1,9 +1,13 @@
 ---
+import Dots from "../components/visual/Dots.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Ponto Movel Marcenaria">
 	<img src="/PontoMovel/home/vetor-2.png" class="imagem__vetor1" />
+	<div class="pontos">
+		<Dots />
+	</div>
 	<section class="container2">
 		<div class="container2__texto container__texto">
 			<h2>PROJETO</h2>
@@ -79,6 +83,12 @@ import Layout from "../layouts/Layout.astro";
 	.imagem__vetor1 {
 		position: absolute;
 		z-index: -1;
+	}
+
+	.pontos {
+		position: absolute;
+		top: 170px;
+		left: 330px;
 	}
 
 	/* section1 */
@@ -163,6 +173,10 @@ import Layout from "../layouts/Layout.astro";
 	}
 
 	@media (max-width: 850px) {
+		.pontos {
+			display: none;
+		}
+
 		.container__texto {
 			background-color: #fffe;
 			padding: 30px;
