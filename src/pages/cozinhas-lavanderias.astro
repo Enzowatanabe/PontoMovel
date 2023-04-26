@@ -88,16 +88,18 @@ import Layout from "../layouts/Layout.astro";
 	}
 
 	.mosaico {
+		--gap: min(20px, 2vw);
+
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		column-gap: 20px;
+		column-gap: var(--gap);
 		padding: 20px;
 	}
 
 	.container__coluna {
 		display: flex;
 		flex-direction: column;
-		gap: 20px;
+		gap: var(--gap);
 	}
 
 	.imagem {
