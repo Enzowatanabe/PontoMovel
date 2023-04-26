@@ -27,7 +27,9 @@ import Layout from "../layouts/Layout.astro";
 				class="container1__img"
 			/>
 			<div class="container1__borda">
-				<p>Aqui seu sonho vira realidade.</p>
+				<p class="container1__borda_texto">
+					Aqui seu sonho vira realidade.
+				</p>
 			</div>
 			<img
 				src="/PontoMovel/residencial/fundo.png"
@@ -36,55 +38,36 @@ import Layout from "../layouts/Layout.astro";
 			/>
 		</div>
 	</section>
-	<section class="container2">
-		<div>
-			<img
-				src="/PontoMovel/residencial/cozinha.png"
-				alt="Imagem de uma cozinha"
-				class="container2__img1"
-			/>
-			<div class="container2__txtimg">
-				<p class="container2__text">SALAS E VARANDAS</p>
-			</div>
+	<section class="cards_section">
+		<div class="cards_container1">
+			<a href="/PontoMovel/salas-varandas">
+				<div class="card salas_varandas">
+					<div class="card-text">SALAS E VARANDAS</div>
+				</div>
+			</a>
+			<a href="/PontoMovel/dormitorios-closets">
+				<div class="card dormitorios_closets">
+					<div class="card-text">DORMITÓRIOS E CLOSETS</div>
+				</div>
+			</a>
+			<a href="/PontoMovel/cozinhas-lavanderias">
+				<div class="card cozinhas_lavanderias">
+					<div class="card-text">COZINHAS E LAVANDERIAS</div>
+				</div>
+			</a>
 		</div>
-		<div>
-			<img
-				src="/PontoMovel/residencial/dormitorio.png"
-				alt="Image de um dormitorio e closets"
-				class="container2__img1"
-			/>
-			<div class="container2__txtimg1">
-				<p class="container2__text">DORMITÓRIOS E CLOSETS</p>
-			</div>
-		</div>
-		<div>
-			<img
-				src="/PontoMovel/residencial/sala-2.png"
-				alt="Imagem de uma sala de estar"
-				class="container2__img1"
-			/>
-			<div class="container2__txtimg1">
-				<p class="container2__text">COZINHAS E LAVANDERIAS</p>
-			</div>
-		</div>
-	</section>
-	<section class="container3">
-		<div class="container3__bloco">
-			<img
-				src="/PontoMovel/residencial/pia-banheiro.png"
-				alt="Imagem de pias de banheiro"
-				class="container3__img"
-			/>
-			<div class="container3__txtimg1">
-				<p class="container3__text">BANHEIRO</p>
-			</div>
+		<div class="cards_container2">
+			<a href="/PontoMovel/cozinhas">
+				<div class="card banheiros">
+					<div class="card-text">BANHEIROS</div>
+				</div>
+			</a>
 		</div>
 	</section>
 </Layout>
 
 <style>
 	/* section1 */
-
 	.container1 {
 		display: flex;
 		justify-content: space-between;
@@ -129,115 +112,88 @@ import Layout from "../layouts/Layout.astro";
 	}
 
 	/* section2 */
+	.cards_section {
+		--gap: min(40px, 5vw);
+		--height1: 480px;
+		--height2: 250px;
 
-	.container2 {
-		display: flex;
-		justify-content: space-around;
-		margin: 100px 40px;
-	}
-
-	.container2__img1 {
-		position: absolute;
-	}
-
-	.container2__img1:hover,
-	.container3__img:hover {
-		box-sizing: border-box;
-		border: 2px solid #d7a886;
-		transform: scale(1.05);
-		cursor: pointer;
-	}
-
-	.container2__txtimg:hover,
-	.container2__txtimg1:hover,
-	.container2__txtimg2:hover,
-	.container3__txtimg1:hover {
-		transform: scale(1.05);
-		cursor: pointer;
-	}
-
-	.container2__txtimg {
-		position: relative;
-		text-align: center;
-		align-items: center;
-		margin: 200px 40px;
-		box-sizing: border-box;
-		background-color: white;
-		opacity: 0.8;
-		width: 194px;
-		height: 80px;
-		padding: 14px 9px;
-	}
-
-	.container2__txtimg1 {
-		position: relative;
-		text-align: center;
-		align-items: center;
-		margin: 200px 40px;
-		box-sizing: border-box;
-		background-color: white;
-		opacity: 0.8;
-		width: 194px;
-		height: 80px;
-		padding: 14px 9px;
-	}
-
-	.container2__txtimg2 {
-		position: relative;
-		text-align: center;
-		align-items: center;
-		margin: 200px 40px;
-		box-sizing: border-box;
-		background-color: white;
-		opacity: 0.8;
-		width: 194px;
-		height: 80px;
-		padding: 14px 9px;
-	}
-
-	.container2__text {
-		color: black;
-		font-size: 20px;
-		font-weight: 600;
-	}
-
-	/* section3 */
-
-	.container3 {
-		align-items: center;
-		text-align: center;
-		margin: 50px 40px;
-		height: 200px;
-	}
-
-	.container3__bloco {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		max-width: 1000px;
+		margin: 0 auto;
+		margin-top: 50px;
+		margin-bottom: 30px;
+		padding: 0 20px;
+		gap: var(--gap);
+	}
+
+	.cards_container1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: var(--gap);
+	}
+
+	.cards_container1 .card {
+		height: var(--height1);
+	}
+
+	.cards_container2 .card {
+		height: var(--height2);
+	}
+
+	.card {
+		display: grid;
+		place-items: center;
+		transform: scale(1);
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+
+	.card:hover {
+		transform: scale(1.05);
+		border: 2px solid #d7a886;
+	}
+
+	.card-text {
+		display: grid;
+		place-items: center;
 		text-align: center;
-	}
-
-	.container3__img {
-		position: absolute;
-		top: 1200px;
-	}
-
-	.container3__text {
 		color: black;
-		font-size: 20px;
+		min-height: 30px;
+		font-size: clamp(0.7rem, 1.5vw, 1rem);
+		min-width: min(150px, 100%);
 		font-weight: 600;
+		background-color: #fffc;
+		padding: 20px;
 	}
 
-	.container3__txtimg1 {
-		position: relative;
-		text-align: center;
-		align-items: center;
-		box-sizing: border-box;
-		background-color: white;
-		opacity: 0.8;
-		width: 194px;
-		height: 80px;
-		padding: 28px 9px;
-		margin: 30px;
+	.salas_varandas {
+		background-image: url("/PontoMovel/residencial/salas-varandas.png");
+	}
+
+	.dormitorios_closets {
+		background-image: url("/PontoMovel/residencial/dormitorios-closets.png");
+	}
+
+	.cozinhas_lavanderias {
+		background-image: url("/PontoMovel/residencial/cozinhas-lavanderias.png");
+	}
+
+	.banheiros {
+		background-image: url("/PontoMovel/residencial/banheiros.png");
+	}
+
+	@media (max-width: 1000px) {
+		.container1__borda_texto {
+			display: none;
+		}
+
+		.container1__texto {
+			background-color: #fffe;
+			padding: 30px;
+			border-radius: 20px;
+		}
 	}
 </style>
